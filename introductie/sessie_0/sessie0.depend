@@ -1,0 +1,25 @@
+# depslib dependency file v1.0
+1539936501 source:/home/student/Github/2018_labo_beeldinterpretatie/sessie0/sessie0/main.cpp
+	<iostream>
+	<opencv2/opencv.hpp>
+
+1540306850 source:/home/paul/Desktop/school/1819/2018_labo_beeldinterpretatie/sessie0/sessie0/main.cpp
+	<iostream>
+	<opencv2/opencv.hpp>
+
+1540322164 source:/home/paul/Desktop/school/1819/2018_labo_beeldinterpretatie/sessie_0/main.cpp
+	<iostream>
+	<opencv2/opencv.hpp>
+
+1540382382 source:/home/paul/Desktop/school/1819/2018_beeldinterpretatie_Leroy_Paul/sessie_0/main.cpp
+	<iostream>
+	<opencv2/opencv.hpp>
+
+1540399934 source:/home/robbe/Documents/test/2018_beeldinterpretatie_Leroy_Paul/sessie_0/main.cpp
+	<iostream>
+	<opencv2/opencv.hpp>
+
+1540403736 source:/home/robbe/Documents/school/labo_beeldinterpretatie/2018_labo_beeldinterpretatie/introductie/sessie_0/main.cpp
+	<iostream>
+	<opencv2/opencv.hpp>
+
