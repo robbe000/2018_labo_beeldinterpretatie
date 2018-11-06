@@ -52,7 +52,6 @@ int main(int argc, const char** argv) {
         return -1;
     }
 
-    if(false) {
     //Afbeelding 1 (grijs) weergeven
     namedWindow( "Afbeelding 1 grijs", WINDOW_AUTOSIZE);
     imshow( "Afbeelding 1 grijs", image1 );
@@ -109,7 +108,6 @@ int main(int argc, const char** argv) {
         for(int j=0; j<grijs.cols ; j++) {
             cout << (int)grijs.at<uchar>(i, j) << endl;
         }
-    }
     }
 
     //Twee figuren tekenen op een canvas

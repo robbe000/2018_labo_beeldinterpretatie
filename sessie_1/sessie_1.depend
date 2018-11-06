@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1541543286 source:/home/robbe/Documents/school/labo_beeldinterpretatie/2018_labo_beeldinterpretatie/sessie_1/main.cpp
+	<iostream>
+	<opencv2/opencv.hpp>
+	"skinpixels.h"
+
+1541543318 /home/robbe/Documents/school/labo_beeldinterpretatie/2018_labo_beeldinterpretatie/sessie_1/skinpixels.h
+	<iostream>
+	<opencv2/opencv.hpp>
+
+1541544918 source:/home/robbe/Documents/school/labo_beeldinterpretatie/2018_labo_beeldinterpretatie/sessie_1/skinpixels.cpp
+	"skinpixels.h"
+	<iostream>
+	<opencv2/opencv.hpp>
+
