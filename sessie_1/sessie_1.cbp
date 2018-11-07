@@ -11,7 +11,7 @@
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
-				<Option parameters='-img1=&quot;imageColor.jpg&quot;  -img2=&quot;imageBimodal.jpg&quot;' />
+				<Option parameters='-img1=&quot;imageColor.jpg&quot;  -img2=&quot;imageBimodal.jpg&quot; -img3=&quot;imageColorAdapted.jpg&quot;' />
 				<Compiler>
 					<Add option="-g" />
 				</Compiler>
@@ -35,9 +35,13 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="eandd.cpp" />
+		<Unit filename="eandd.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="skinpixels.cpp" />
 		<Unit filename="skinpixels.h" />
+		<Unit filename="text.cpp" />
+		<Unit filename="text.h" />
 		<Extensions>
 			<code_completion />
 			<debugger />
