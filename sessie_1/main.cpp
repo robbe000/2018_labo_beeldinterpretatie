@@ -65,21 +65,21 @@ int main(int argc, const char** argv) {
 
     //DE INGELEZEN AFBEELDINGE WEERGEVEN
     //Afbeelding 1 (grijs) weergeven
-    //namedWindow( "Afbeelding 1 origineel", WINDOW_AUTOSIZE);
-    //imshow( "Afbeelding 1 origineel", image1 );
+    namedWindow( "Afbeelding 1 origineel", WINDOW_AUTOSIZE);
+    imshow( "Afbeelding 1 origineel", image1 );
 
-    //namedWindow("Afeelding 2 origineel", WINDOW_AUTOSIZE);
-    //imshow("Afeelding 2 origineel", image2);
+    namedWindow("Afeelding 2 origineel", WINDOW_AUTOSIZE);
+    imshow("Afeelding 2 origineel", image2);
 
-    //namedWindow("Afeelding 3 origineel", WINDOW_AUTOSIZE);
-    //imshow("Afeelding 3 origineel", image3);
+    namedWindow("Afeelding 3 origineel", WINDOW_AUTOSIZE);
+    imshow("Afeelding 3 origineel", image3);
 
-    //waitKey(0);
+    waitKey(0);
 
 
     //De verschillende onderdelen van de opdracht zijn opgesplitst in functies die te vinden zijn in gelijknamige .h en .cpp files
-    //skinpixels(image1);
-    //text(image2);
+    skinpixels(image1);
+    text(image2);
     eandd(image3);
 
 
