@@ -2,6 +2,7 @@
 #include <opencv2/opencv.hpp>
 #include <string.h>
 #include "segBGR.h"
+#include "segHSV.h"
 
 using namespace std;
 using namespace cv;
@@ -84,5 +85,6 @@ int main(int argc, const char** argv) {
     waitKey(0);
     */
 
-    segBGR(image);
+    //segBGR(image);
+    segHSV(image);
 }

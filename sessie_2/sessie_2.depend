@@ -1,9 +1,10 @@
 # depslib dependency file v1.0
-1541753399 source:/home/robbe/Documents/school/labo_beeldinterpretatie/2018_labo_beeldinterpretatie/sessie_2/main.cpp
+1542211834 source:/home/robbe/Documents/school/labo_beeldinterpretatie/2018_labo_beeldinterpretatie/sessie_2/main.cpp
 	<iostream>
 	<opencv2/opencv.hpp>
 	<string.h>
 	"segBGR.h"
+	"segHSV.h"
 
 1541752400 /home/robbe/Documents/school/labo_beeldinterpretatie/2018_labo_beeldinterpretatie/sessie_2/segBGR.h
 	<iostream>
@@ -15,13 +16,13 @@
 	<string.h>
 	"segBGR.h"
 
-1541754355 source:/home/robbe/Documents/school/labo_beeldinterpretatie/2018_labo_beeldinterpretatie/sessie_2/segHSV.cpp
+1542217959 source:/home/robbe/Documents/school/labo_beeldinterpretatie/2018_labo_beeldinterpretatie/sessie_2/segHSV.cpp
 	<iostream>
 	<opencv2/opencv.hpp>
 	<string.h>
 	"segHSV.h"
 
-1541754339 /home/robbe/Documents/school/labo_beeldinterpretatie/2018_labo_beeldinterpretatie/sessie_2/segHSV.h
+1542212326 /home/robbe/Documents/school/labo_beeldinterpretatie/2018_labo_beeldinterpretatie/sessie_2/segHSV.h
 	<iostream>
 	<opencv2/opencv.hpp>
 
