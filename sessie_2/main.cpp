@@ -7,11 +7,8 @@
 using namespace std;
 using namespace cv;
 
-// TODO (robbe#1#): bounding boxen, connected components
-
 int main(int argc, const char** argv) {
     Mat image[4];
-
 
     //Helpboodschap configureren
     CommandLineParser parser(argc, argv,

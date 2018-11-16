@@ -1,25 +1,12 @@
- # Public repository voor het vak beeldinterpretatie (practica) 2018 - 2019
+# Sessie 2 - colour space manipulation
 
-Per sessie vind je een folder met alle nuttige informatie gekoppeld aan de opdracht van die week.
+Omdat autonome wagens heel erg in de opmars zijn willen we dat deze wagens zich ook aan de verkeersregels houden zoals de maximaal toegelaten snelheid. Hiervoor gaan we een camera in de auto monteren en een computer die verkeersborden zal detecteren en analyseren. Jouw opdracht is een stukje software schrijven om de rode verkeersborden te filteren van de achtergrond zodat deze later kunnen geanalyseerd worden.
 
-Stelselmatig zullen de sessies toegevoegd worden aan deze repository.
-
-## Todo studenten
-* Registreer jezelf op Github
-* Maak een repository aan genaamd `2018_beeldinterpretatie_naam_voornaam`
-* Stuur je repository link door naar steven[dot]puttemans[at]kuleuven[dot]be en timothy[dot]callemein[at]kuleuven[dot]be
-* Zorg ervoor dat de woensdag om 23u59 voor elke oefenzitting, de opgelossing van de voorgaande oefenzitting onder een folder `sessie_sessienummer`, op je repository terug te vinden is. Deze zal automatisch op dat moment gekopieerd worden, waarna je voor die oefenzitten een beoordeling krijgt.
-
-## Planning lessen
-
-| **Datum** | **Uur + Locatie** | **Opdracht** |
-| --------- | ----------------- | ------------ |
-| 19/10/2018 | 8U15 - 10U15 / A212 | Introductiezitting + initiatie OpenCV |
-| 26/10/2018 | 8U15 - 10U15 / A212 | Morphologische operatoren |
-| 09/11/2018 | 8U15 - 10U15 / A212 | Color space manipulatie |
-| 16/11/2018 | 8U15 - 10U15 / A212 | Template matching |
-| 23/11/2018 | 8U15 - 10U15 / A212 | Keypoint detection and matching |
-| 30/11/2018 | 8U15 - 10U15 / A212 | Machine learning: Naive Bayes, kNN, SVM |
-| 07/12/2018 | 8U15 - 10U15 / A212 | Advanced object detection: boosted cascades, HOG+SVM |
-| 14/12/2018 | 8U15 - 10U15 / A212 | Deep learning: classification |
-| 21/12/2018 | 8U15 - 10U15 / A212 | Deep learning: localization |
+* Opdracht 1: Segmenteer de verkeersborden in de BGR kleurenruimte
+   - Wat zijn de voordelen?
+   - Wat zijn de nadelen?
+* Opdracht 2: Segmenteer de verkeersborden in de HSV kleurenruimte
+   - Wat zijn de voordelen?
+   - Wat zijn de nadelen?
+* Opdracht 3: Gebruik connected component analyse om enkel het stopbord over te houden
+* Opdracht 4: Gebruik een trackbar om de optimale threshold waardes te bepalen
