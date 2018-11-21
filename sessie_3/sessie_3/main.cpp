@@ -63,7 +63,7 @@ int main(int argc, const char** argv) {
     waitKey(0);*/
 
     //1 match zoeken
-    matchLoc = template_match(input_img, template_img, 0);
+    matchLoc = template_match(input_img, template_img, TM_CCOEFF_NORMED);
 
     //Rechthoekje tekenen rond gevonden gebied
     /*input_img.copyTo(single_output_image);
@@ -72,7 +72,19 @@ int main(int argc, const char** argv) {
     imshow("Output", single_output_image);
     waitKey(0);*/
 
-    //Meerdere matches zoeken
-    template_match_multiple(input_img, template_img, 0);
+    //Meerdere matches zoeken op een rechte afbeelding
+    Mat single_input_img;
+    input_img.copyTo(single_input_img);
+    template_match_multiple(single_input_img, template_img, TM_CCOEFF_NORMED, 0);
 
+    //Afbeelding draaien en matches zoeken
+    //Afbeelding draaien per 10 graden
+    for(int graden=0;graden<360;graden=graden+10) {
+        Mat rot_img, rot_matrix;
+        rot_matrix = getRotationMatrix2D(Point(input_img.cols/2, input_img.rows/2), graden, 1.0);
+
+        warpAffine(input_img, rot_img, rot_matrix, rot_img.size());
+
+        template_match_multiple(rot_img, template_img, TM_CCOEFF_NORMED, 30000);
+    }
 }

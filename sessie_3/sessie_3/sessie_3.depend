@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1542356149 source:/home/robbe/Documents/school/labo_beeldinterpretatie/2018_labo_beeldinterpretatie/sessie_3/sessie_3/main.cpp
+1542813568 source:/home/robbe/Documents/school/labo_beeldinterpretatie/2018_labo_beeldinterpretatie/sessie_3/sessie_3/main.cpp
 	<iostream>
 	<opencv2/opencv.hpp>
 	<string.h>
@@ -16,13 +16,13 @@
 	<string.h>
 	"template_match.h"
 
-1542359656 source:/home/robbe/Documents/school/labo_beeldinterpretatie/2018_labo_beeldinterpretatie/sessie_3/sessie_3/template_match_multiple.cpp
+1542812725 source:/home/robbe/Documents/school/labo_beeldinterpretatie/2018_labo_beeldinterpretatie/sessie_3/sessie_3/template_match_multiple.cpp
 	<iostream>
 	<opencv2/opencv.hpp>
 	<string.h>
-	"template_match.h"
+	"template_match_multiple.h"
 
-1542355740 /home/robbe/Documents/school/labo_beeldinterpretatie/2018_labo_beeldinterpretatie/sessie_3/sessie_3/template_match_multiple.h
+1542796289 /home/robbe/Documents/school/labo_beeldinterpretatie/2018_labo_beeldinterpretatie/sessie_3/sessie_3/template_match_multiple.h
 	<iostream>
 	<opencv2/opencv.hpp>
 
