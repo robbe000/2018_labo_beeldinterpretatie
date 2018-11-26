@@ -66,6 +66,8 @@ vector<Point> template_match_multiple(Mat input_img, Mat template_img, int metho
     }
     cout << "-------" << endl;
     if(weergeven != 0) {
+        namedWindow("Template");
+        imshow("Template", template_img);
         namedWindow("Output");
         imshow("Output", input_img);
         moveWindow("Output", 0, 800);

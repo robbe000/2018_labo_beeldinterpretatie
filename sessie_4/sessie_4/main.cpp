@@ -129,14 +129,14 @@ int main(int argc, const char** argv) {
     waitKey(0);
 
     //Descriptors berekenen
-    /*vector<DMatch> matches;
+    vector<DMatch> matches;
     Mat img_matches;
     Ptr<DescriptorMatcher> matcher = DescriptorMatcher::create(DescriptorMatcher::BRUTEFORCE);
     matcher->match(kinput_orb, kinput_brisk, matches);
 
-    drawMatches(input_img, kinput_orb, template_img, ktemplate_orb, matches, img_matches);
+    //drawMatches(input_img, kinput_orb, template_img, ktemplate_orb, matches, img_matches);
 
     namedWindow("Matches");
-    imshow("Matches", img_matches);*/
+    imshow("Matches", img_matches);
 
 }
