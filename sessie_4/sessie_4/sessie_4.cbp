@@ -36,6 +36,8 @@
 			<Add option="-Wall" />
 		</Compiler>
 		<Unit filename="main.cpp" />
+		<Unit filename="match.cpp" />
+		<Unit filename="match.h" />
 		<Extensions>
 			<code_completion />
 			<debugger />

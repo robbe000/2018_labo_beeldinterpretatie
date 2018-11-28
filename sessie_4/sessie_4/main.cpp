@@ -3,7 +3,9 @@
 #include "opencv2/core.hpp"
 #include "opencv2/features2d.hpp"
 #include "opencv2/highgui.hpp"
+#include "opencv2/imgproc.hpp"
 #include <string.h>
+#include "match.h"
 
 using namespace std;
 using namespace cv;
@@ -70,11 +72,12 @@ int main(int argc, const char** argv) {
         return -1;
     }
 
+    /*
     namedWindow("Input");
     imshow("Input", input_img);
     namedWindow("Template");
     imshow("Template", template_img);
-    //waitKey(0);
+    waitKey(0);*/
 
     //Keypoints zoeken
     vector<KeyPoint> kinput_orb;
@@ -113,6 +116,7 @@ int main(int argc, const char** argv) {
     ktemplate_akaze = features(template_akaze, 2);
     drawKeypoints(template_akaze, ktemplate_akaze, template_akaze, Scalar::all(-1), DrawMatchesFlags::DEFAULT);
 
+    /*
     namedWindow("input_orb");
     imshow("input_orb", input_orb);
     namedWindow("input_brisk");
@@ -126,17 +130,10 @@ int main(int argc, const char** argv) {
     imshow("temp_brisk", template_brisk);
     namedWindow("temp_akaze");
     imshow("temp_akaze", template_akaze);
-    waitKey(0);
+    waitKey(0);*/
 
-    //Descriptors berekenen
-    vector<DMatch> matches;
-    Mat img_matches;
-    Ptr<DescriptorMatcher> matcher = DescriptorMatcher::create(DescriptorMatcher::BRUTEFORCE);
-    matcher->match(kinput_orb, kinput_brisk, matches);
+    //Uit bovenstaande experimenten heb ik de akaze methode genomen.
+    //Dit omdat deze methode de meeste keypoints ontdekt.
 
-    //drawMatches(input_img, kinput_orb, template_img, ktemplate_orb, matches, img_matches);
-
-    namedWindow("Matches");
-    imshow("Matches", img_matches);
-
+    match(input_img, template_img);
 }

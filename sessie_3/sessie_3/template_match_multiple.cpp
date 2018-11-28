@@ -7,12 +7,9 @@ using namespace std;
 using namespace cv;
 
 vector<Point> template_match_multiple(Mat input_img, Mat template_img, int method, int weergeven) {
-    Mat result, mul_result, input_histequal;
+    Mat result, mul_result;
     Point minLoc, maxLoc, matchLoc;
     vector<Point> punten_resultaat;
-
-    //De input afbeelding bewerken
-    input_histequal = equalizeIntensity(input_img);
 
     //De resultaat afbeeldingen aanmaken
     int result_cols = input_img.cols - template_img.cols + 1;
@@ -24,11 +21,18 @@ vector<Point> template_match_multiple(Mat input_img, Mat template_img, int metho
     matchTemplate(input_img, template_img, result, method);
 
     //Het resultaat normaliseren
-    normalize(result, result, 0, 1, NORM_MINMAX, -1, Mat());
+    //---Omdat er soms geen resultaten gevonden zullen worden kunnen we niet normaliseren.
+    //---Daarom de threshold toepassen op de niet genormaliseerde waarde!
+    //normalize(result, result, 0, 1, NORM_MINMAX, -1, Mat());
 
-    if( method  == CV_TM_SQDIFF || method == CV_TM_SQDIFF_NORMED ) {
+    /*if( method  == CV_TM_SQDIFF || method == CV_TM_SQDIFF_NORMED ) {
         result = 1-result;
-    }
+    }*/
+
+    //Globale gegevens bekijken
+    double minVal1, maxVal1;
+    minMaxLoc(result, &minVal1, &maxVal1, nullptr, nullptr);
+    cout << "Globale gegevens Minval: " << minVal1 << " Maxval: " << maxVal1 << endl;
 
     if(weergeven != 0) {
         //De resulaatmatrix weergeven
@@ -38,7 +42,7 @@ vector<Point> template_match_multiple(Mat input_img, Mat template_img, int metho
     }
 
     //Minima of maxima aanduiden
-    threshold(result, mul_result, 0.95, 1, THRESH_BINARY);
+    threshold(result, mul_result, 0.7, 1, THRESH_BINARY);
 
     if(weergeven != 0) {
         namedWindow("hold");
@@ -64,6 +68,7 @@ vector<Point> template_match_multiple(Mat input_img, Mat template_img, int metho
         rectangle(input_img, Point(blob.x+maxLoc.x, blob.y+maxLoc.y), Point(blob.x+maxLoc.x+template_img.cols, blob.y+maxLoc.y+template_img.rows), Scalar(0,255,255), 3, 8, 0);
         cout << maxVal << endl;
     }
+
     cout << "-------" << endl;
     if(weergeven != 0) {
         namedWindow("Template");
@@ -75,27 +80,4 @@ vector<Point> template_match_multiple(Mat input_img, Mat template_img, int metho
     }
 
     return punten_resultaat;
-}
-
-Mat equalizeIntensity(const Mat& inputImage)
-{
-    if(inputImage.channels() >= 3)
-    {
-        Mat ycrcb;
-
-        cvtColor(inputImage,ycrcb,CV_BGR2YCrCb);
-
-        vector<Mat> channels;
-        split(ycrcb,channels);
-
-        equalizeHist(channels[0], channels[0]);
-
-        Mat result;
-        merge(channels,ycrcb);
-
-        cvtColor(ycrcb,result,CV_YCrCb2BGR);
-
-        return result;
-    }
-    return Mat();
 }

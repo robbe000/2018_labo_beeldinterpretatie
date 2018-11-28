@@ -79,7 +79,7 @@ int main(int argc, const char** argv) {
 
     //Afbeelding draaien en matches zoeken
     //Afbeelding draaien per 10 graden
-    for(int graden=0;graden<360;graden=graden+10) {
+    for(int graden=0;graden<360;graden=graden+5) {
         Mat rot_img, rot_matrix;
         rot_matrix = getRotationMatrix2D(Point(input_img.cols/2, input_img.rows/2), graden, 1.0);
 

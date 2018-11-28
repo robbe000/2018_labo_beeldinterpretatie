@@ -22,6 +22,7 @@ Point template_match(Mat input_img, Mat template_img, int method) {
     //Het resultaat normaliseren
     normalize(result, result, 0, 1, NORM_MINMAX, -1, Mat());
 
+
     //De resulaatmatrix weergeven
     /*
     namedWindow("Resultaat Matrix");
