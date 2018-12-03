@@ -4,10 +4,12 @@
 #include "opencv2/features2d.hpp"
 #include "opencv2/highgui.hpp"
 #include "opencv2/imgproc.hpp"
+#include "opencv2/ml.hpp"
 #include <string.h>
 
 using namespace std;
 using namespace cv;
+using namespace ml;
 
 Mat input_glob;
 Mat input_glob_hsv;
@@ -87,9 +89,10 @@ int main(int argc, const char** argv) {
     input_img.copyTo(input_glob);
 
     //HSV eenmalig opsplitsen voor het verzamelen van de data na het klikken
-    cvtColor(input_img, input_glob_hsv, COLOR_BGR2HSV);
+    cvtColor(input_img, input_glob_hsv, CV_BGR2HSV);
 
     namedWindow("Beeld");
+    moveWindow("Beeld", 800, 0);
 
     //Callback functie muis voor selecteren van de pixels
     setMouseCallback("Beeld", mCallback, NULL);
@@ -116,8 +119,116 @@ int main(int argc, const char** argv) {
     waitKey(0);
     //Gegevens analyseren
     cout << "Gegevens verwerken\n---------------------------------------------------"  << endl;
-
     //trainingdata en label aanmaken
-    //iets met voncat
+
+    cout << "Trainingsdata genereren..." << endl;
+
+    Mat train_voorgrond, train_achtergrond;
+    Mat class_voorgrond, class_achtergrond;
+    Mat class_tot, train_tot;
+
+    train_voorgrond.create(voorgrond.size(), 3, CV_32FC1);
+    train_achtergrond.create(achtergrond.size(), 3, CV_32FC1);
+
+    class_voorgrond.create(voorgrond.size(), 1, CV_32SC1);
+    class_achtergrond.create(achtergrond.size(), 1, CV_32SC1);
+
+    //Voorgrond trainingsdata vormen
+    for(uint i=0; i<voorgrond.size(); i++) {
+        train_voorgrond.at<uchar>(i, 0) = voorgrond.at(i)[0];
+        train_voorgrond.at<uchar>(i, 1) = voorgrond.at(i)[1];
+        train_voorgrond.at<uchar>(i, 2) = voorgrond.at(i)[2];
+    }
+
+    //Voorgrond class op 1 => is goed
+    for(uint i=0; i<voorgrond.size(); i++) {
+        class_voorgrond.at<uchar>(i, 0) = 1;
+    }
+
+
+    //Achtergrond trainingsdata vormen
+    for(uint i=0; i<achtergrond.size(); i++) {
+        train_achtergrond.at<uchar>(i, 0) = achtergrond.at(i)[0];
+        train_achtergrond.at<uchar>(i, 1) = achtergrond.at(i)[1];
+        train_achtergrond.at<uchar>(i, 2) = achtergrond.at(i)[2];
+    }
+
+    //Achtergrond class op 0 => niet goed
+    for(uint i=0; i<achtergrond.size(); i++) {
+        class_achtergrond.at<uchar>(i, 0) = 0;
+    }
+
+    vconcat(train_voorgrond, train_achtergrond, train_tot);
+    vconcat(class_voorgrond, class_achtergrond, class_tot);
+
+    for(int i=0;i<train_tot.rows;i++) {
+        cout << (int)train_tot.at<uchar>(i, 0);
+        cout << " ";
+        cout << (int)train_tot.at<uchar>(i, 1);
+        cout << " ";
+        cout << (int)train_tot.at<uchar>(i, 2);
+        cout << " ";
+        cout << (int)class_tot.at<uchar>(i, 0);
+        cout << endl;
+    }
+
+    //KNN
+    cout << "K-Nearest-Neighbor trainen..." << endl;
+
+    Ptr<KNearest> knn = KNearest::create();
+    Ptr<TrainData> trainKnn = TrainData::create(train_tot, ROW_SAMPLE, class_tot);
+
+    knn->setIsClassifier(true);
+    knn->setAlgorithmType(KNearest::BRUTE_FORCE);
+    knn->setDefaultK(3);
+    knn->train(trainKnn);
+
+
+    //NBC
+    cout << "Normal Bayes Classifier trainen..." << endl;
+
+    Ptr<NormalBayesClassifier> nbc = NormalBayesClassifier::create();
+    nbc->train(train_tot, ROW_SAMPLE, class_tot);
+
+
+    //SVM
+    cout << "Support Vector Machine trainen..." << endl;
+
+    Ptr<SVM> svm = SVM::create();
+    svm->setType(SVM::C_SVC);
+    svm->setKernel(SVM::LINEAR);
+    svm->setTermCriteria(TermCriteria(TermCriteria::MAX_ITER, 100, 1e-6));
+    svm->train(train_tot, ROW_SAMPLE, class_tot);
+
+
+    //Berekenen op inputafbeelinput_pixel.at<uchar>(0, 0) = hsv.val[0];input_pixel.at<uchar>(0, 0) = hsv.val[0];input_pixel.at<uchar>(0, 0) = hsv.val[0];input_pixel.at<uchar>(0, 0) = hsv.val[0];input_pixel.at<uchar>(0, 0) = hsv.val[0];ding
+    cout << "Uitvoeren op input afbeelding..." << endl;
+
+    Mat class_knn, class_nbc, class_svm;
+    Mat result_knn, result_nbc, result_svm;
+    result_knn.create(input_img.rows, input_img.cols, CV_32FC1);
+
+    for(int x=0; x<input_img.rows; x++) {
+        for(int y=0; y<input_img.cols; y++) {
+            //Input voor test genereren
+            Vec3b hsv = input_glob_hsv.at<Vec3b>(x,y);
+            Mat input_pixel(1, 3, CV_32FC1);
+            input_pixel.at<float>(0, 0) = hsv.val[0];
+            input_pixel.at<float>(0, 1) = hsv.val[1];
+            input_pixel.at<float>(0, 2) = hsv.val[2];
+
+            knn->findNearest(input_pixel, knn->getDefaultK(), class_knn);
+
+            result_knn.at<uchar>(x, y) = (uchar)class_knn.at<float>(0,0);
+        }
+    }
+
+    //Binaire afbeelding omvormen naar een zichtbaar masker
+    result_knn = result_knn*255;
+
+    namedWindow("knn");
+
+    imshow("knn", result_knn);
+    waitKey(0);
 
 }
