@@ -13,7 +13,7 @@ using namespace ml;
 
 Mat input_glob;
 Mat input_glob_hsv;
-vector<Vec3b> voorgrond, achtergrond;
+vector<Point> voorgrond, achtergrond;
 int status;     //0 voorgrond detectren, 1 achtergrond detecteren
 
 void mCallback(int event, int x, int y, int flags, void* userdata) {
@@ -24,10 +24,10 @@ void mCallback(int event, int x, int y, int flags, void* userdata) {
         cout << "Pixel waarde: H:" << (int)hsv.val[0] << " S:" << (int)hsv.val[1] << " V:" << (int)hsv.val[2] << "\t";
 
         if(status == 0) {
-            voorgrond.push_back(hsv);
+            voorgrond.push_back(Point(x, y));
             cout << "Aantal punten voorgrond: " << voorgrond.size();
         } else if (status == 1) {
-            achtergrond.push_back(hsv);
+            achtergrond.push_back(Point(x, y));
             cout << "Aantal punten achtergrond: " << achtergrond.size();
         }
 
@@ -135,11 +135,9 @@ int main(int argc, const char** argv) {
 
     //Voorgrond trainingsdata vormen
     for(uint i=0; i<voorgrond.size(); i++) {
-        Vec3b buffer = voorgrond.at(i);
-
-        train_voorgrond.at<float>(i, 0) = (float)buffer[0];
-        train_voorgrond.at<float>(i, 1) = (float)buffer[1];
-        train_voorgrond.at<float>(i, 2) = (float)buffer[2];
+        train_voorgrond.at<float>(i, 0) = input_glob_hsv.at<Vec3b>(voorgrond[i])[0];
+        train_voorgrond.at<float>(i, 1) = input_glob_hsv.at<Vec3b>(voorgrond[i])[1];
+        train_voorgrond.at<float>(i, 2) = input_glob_hsv.at<Vec3b>(voorgrond[i])[2];
     }
 
     //Voorgrond class op 1 => is goed
@@ -148,11 +146,9 @@ int main(int argc, const char** argv) {
 
     //Achtergrond trainingsdata vormen
     for(uint i=0; i<achtergrond.size(); i++) {
-        Vec3b buffer = achtergrond.at(i);
-
-        train_achtergrond.at<float>(i, 0) = (float)buffer[0];
-        train_achtergrond.at<float>(i, 1) = (float)buffer[1];
-        train_achtergrond.at<float>(i, 2) = (float)buffer[2];
+        train_achtergrond.at<float>(i, 0) = input_glob_hsv.at<Vec3b>(voorgrond[i])[0];
+        train_achtergrond.at<float>(i, 1) = input_glob_hsv.at<Vec3b>(voorgrond[i])[1];
+        train_achtergrond.at<float>(i, 2) = input_glob_hsv.at<Vec3b>(voorgrond[i])[2];
     }
 
     //Achtergrond class op 0 => niet goed
@@ -220,9 +216,9 @@ int main(int argc, const char** argv) {
             //Input voor test genereren
             Vec3b hsv = input_glob_hsv.at<Vec3b>(x,y);
             Mat input_pixel(1, 3, CV_32FC1);
-            input_pixel.at<float>(0, 0) = (float)hsv[0];
-            input_pixel.at<float>(0, 1) = (float)hsv[1];
-            input_pixel.at<float>(0, 2) = (float)hsv[2];
+            input_pixel.at<float>(0, 0) = hsv[0];
+            input_pixel.at<float>(0, 1) = hsv[1];
+            input_pixel.at<float>(0, 2) = hsv[2];
 
             knn->findNearest(input_pixel, knn->getDefaultK(), class_knn);
             nbc->predict(input_pixel, class_nbc);
