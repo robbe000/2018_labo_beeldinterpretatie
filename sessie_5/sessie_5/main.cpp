@@ -135,42 +135,46 @@ int main(int argc, const char** argv) {
 
     //Voorgrond trainingsdata vormen
     for(uint i=0; i<voorgrond.size(); i++) {
-        train_voorgrond.at<uchar>(i, 0) = voorgrond.at(i)[0];
-        train_voorgrond.at<uchar>(i, 1) = voorgrond.at(i)[1];
-        train_voorgrond.at<uchar>(i, 2) = voorgrond.at(i)[2];
+        Vec3b buffer = voorgrond.at(i);
+
+        train_voorgrond.at<float>(i, 0) = (float)buffer[0];
+        train_voorgrond.at<float>(i, 1) = (float)buffer[1];
+        train_voorgrond.at<float>(i, 2) = (float)buffer[2];
     }
 
     //Voorgrond class op 1 => is goed
-    for(uint i=0; i<voorgrond.size(); i++) {
-        class_voorgrond.at<uchar>(i, 0) = 1;
-    }
+    class_voorgrond = Mat::ones(class_voorgrond.rows, class_voorgrond.cols, CV_32SC1);
 
 
     //Achtergrond trainingsdata vormen
     for(uint i=0; i<achtergrond.size(); i++) {
-        train_achtergrond.at<uchar>(i, 0) = achtergrond.at(i)[0];
-        train_achtergrond.at<uchar>(i, 1) = achtergrond.at(i)[1];
-        train_achtergrond.at<uchar>(i, 2) = achtergrond.at(i)[2];
+        Vec3b buffer = achtergrond.at(i);
+
+        train_achtergrond.at<float>(i, 0) = (float)buffer[0];
+        train_achtergrond.at<float>(i, 1) = (float)buffer[1];
+        train_achtergrond.at<float>(i, 2) = (float)buffer[2];
     }
 
     //Achtergrond class op 0 => niet goed
-    for(uint i=0; i<achtergrond.size(); i++) {
-        class_achtergrond.at<uchar>(i, 0) = 0;
-    }
+    class_achtergrond = Mat::zeros(class_achtergrond.rows, class_achtergrond.cols, CV_32SC1);
 
+    //Samenvoegen
     vconcat(train_voorgrond, train_achtergrond, train_tot);
     vconcat(class_voorgrond, class_achtergrond, class_tot);
 
+    //Waarden afprinten der controle
+    cout << "--" << endl;
     for(int i=0;i<train_tot.rows;i++) {
-        cout << (int)train_tot.at<uchar>(i, 0);
+        cout << (float)train_tot.at<float>(i, 0);
         cout << " ";
-        cout << (int)train_tot.at<uchar>(i, 1);
+        cout << (float)train_tot.at<float>(i, 1);
         cout << " ";
-        cout << (int)train_tot.at<uchar>(i, 2);
+        cout << (float)train_tot.at<float>(i, 2);
         cout << " ";
         cout << (int)class_tot.at<uchar>(i, 0);
         cout << endl;
     }
+    cout << "--" << endl;
 
     //KNN
     cout << "K-Nearest-Neighbor trainen..." << endl;
@@ -201,34 +205,49 @@ int main(int argc, const char** argv) {
     svm->train(train_tot, ROW_SAMPLE, class_tot);
 
 
-    //Berekenen op inputafbeelinput_pixel.at<uchar>(0, 0) = hsv.val[0];input_pixel.at<uchar>(0, 0) = hsv.val[0];input_pixel.at<uchar>(0, 0) = hsv.val[0];input_pixel.at<uchar>(0, 0) = hsv.val[0];input_pixel.at<uchar>(0, 0) = hsv.val[0];ding
+    //Berekenen op inputafbeelding
     cout << "Uitvoeren op input afbeelding..." << endl;
 
     Mat class_knn, class_nbc, class_svm;
     Mat result_knn, result_nbc, result_svm;
-    result_knn.create(input_img.rows, input_img.cols, CV_32FC1);
+
+    result_knn = Mat::zeros(input_img.rows, input_img.cols, CV_8UC1);
+    result_nbc = Mat::zeros(input_img.rows, input_img.cols, CV_8UC1);
+    result_svm = Mat::zeros(input_img.rows, input_img.cols, CV_8UC1);
 
     for(int x=0; x<input_img.rows; x++) {
         for(int y=0; y<input_img.cols; y++) {
             //Input voor test genereren
             Vec3b hsv = input_glob_hsv.at<Vec3b>(x,y);
             Mat input_pixel(1, 3, CV_32FC1);
-            input_pixel.at<float>(0, 0) = hsv.val[0];
-            input_pixel.at<float>(0, 1) = hsv.val[1];
-            input_pixel.at<float>(0, 2) = hsv.val[2];
+            input_pixel.at<float>(0, 0) = (float)hsv[0];
+            input_pixel.at<float>(0, 1) = (float)hsv[1];
+            input_pixel.at<float>(0, 2) = (float)hsv[2];
 
             knn->findNearest(input_pixel, knn->getDefaultK(), class_knn);
+            nbc->predict(input_pixel, class_nbc);
+            svm->predict(input_pixel, class_svm);
 
             result_knn.at<uchar>(x, y) = (uchar)class_knn.at<float>(0,0);
+            result_nbc.at<uchar>(x, y) = (uchar)class_nbc.at<int>(0,0);
+            result_svm.at<uchar>(x, y) = (uchar)class_svm.at<float>(0,0);
         }
     }
 
     //Binaire afbeelding omvormen naar een zichtbaar masker
     result_knn = result_knn*255;
+    result_nbc = result_nbc*255;
+    result_svm = result_svm*255;
 
     namedWindow("knn");
-
     imshow("knn", result_knn);
+
+    namedWindow("nbc");
+    imshow("nbc", result_nbc);
+
+    namedWindow("svm");
+    imshow("svm", result_svm);
+
     waitKey(0);
 
 }
