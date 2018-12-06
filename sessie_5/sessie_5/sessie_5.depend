@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1544036693 source:/home/robbe/Documents/school/labo_beeldinterpretatie/2018_labo_beeldinterpretatie/sessie_5/sessie_5/main.cpp
+1544036918 source:/home/robbe/Documents/school/labo_beeldinterpretatie/2018_labo_beeldinterpretatie/sessie_5/sessie_5/main.cpp
 	<iostream>
 	<opencv2/opencv.hpp>
 	"opencv2/core.hpp"
@@ -9,7 +9,7 @@
 	"opencv2/ml.hpp"
 	<string.h>
 
-1535461101 /usr/local/include/opencv2/opencv.hpp
+1544092017 /usr/local/include/opencv2/opencv.hpp
 	"opencv2/opencv_modules.hpp"
 	"opencv2/core.hpp"
 	"opencv2/calib3d.hpp"
@@ -40,9 +40,9 @@
 	"opencv2/cudastereo.hpp"
 	"opencv2/cudawarping.hpp"
 
-1543875783 /usr/local/include/opencv2/opencv_modules.hpp
+1544093357 /usr/local/include/opencv2/opencv_modules.hpp
 
-1535461101 /usr/local/include/opencv2/core.hpp
+1544093106 /usr/local/include/opencv2/core.hpp
 	"opencv2/core/cvdef.h"
 	"opencv2/core/version.hpp"
 	"opencv2/core/base.hpp"
@@ -58,7 +58,7 @@
 	"opencv2/core/optim.hpp"
 	"opencv2/core/ovx.hpp"
 
-1535461101 /usr/local/include/opencv2/core/cvdef.h
+1544093106 /usr/local/include/opencv2/core/cvdef.h
 	"cvconfig.h"
 	<limits.h>
 	"opencv2/core/hal/interface.h"
@@ -70,14 +70,14 @@
 	<stdint.h>
 	"opencv2/core/fast_math.hpp"
 
-1535461101 /usr/local/include/opencv2/core/hal/interface.h
+1544093106 /usr/local/include/opencv2/core/hal/interface.h
 	<cstddef>
 	<stddef.h>
 	<stdbool.h>
 	<cstdint>
 	<stdint.h>
 
-1535461101 /usr/local/include/opencv2/core/cv_cpu_dispatch.h
+1544093106 /usr/local/include/opencv2/core/cv_cpu_dispatch.h
 	"cv_cpu_config.h"
 	"cv_cpu_helper.h"
 	<emmintrin.h>
@@ -104,9 +104,9 @@
 	<arm_neon.h>
 	<altivec.h>
 
-1535461101 /usr/local/include/opencv2/core/cv_cpu_helper.h
+1544093106 /usr/local/include/opencv2/core/cv_cpu_helper.h
 
-1535461101 /usr/local/include/opencv2/core/fast_math.hpp
+1544093106 /usr/local/include/opencv2/core/fast_math.hpp
 	"opencv2/core/cvdef.h"
 	<emmintrin.h>
 	<cmath>
@@ -114,9 +114,9 @@
 	<math.h>
 	"tegra_round.hpp"
 
-1535461101 /usr/local/include/opencv2/core/version.hpp
+1544093106 /usr/local/include/opencv2/core/version.hpp
 
-1535461101 /usr/local/include/opencv2/core/base.hpp
+1544093106 /usr/local/include/opencv2/core/base.hpp
 	"opencv2/opencv_modules.hpp"
 	<climits>
 	<algorithm>
@@ -126,7 +126,7 @@
 	"opencv2/core/vsx_utils.hpp"
 	"opencv2/core/check.hpp"
 
-1535461101 /usr/local/include/opencv2/core/cvstd.hpp
+1544093106 /usr/local/include/opencv2/core/cvstd.hpp
 	"opencv2/core/cvdef.h"
 	<cstddef>
 	<cstring>
@@ -138,34 +138,34 @@
 	<cmath>
 	"opencv2/core/ptr.inl.hpp"
 
-1535461101 /usr/local/include/opencv2/core/ptr.inl.hpp
+1544093106 /usr/local/include/opencv2/core/ptr.inl.hpp
 	<algorithm>
 
-1535461101 /usr/local/include/opencv2/core/neon_utils.hpp
+1544092017 /usr/local/include/opencv2/core/neon_utils.hpp
 	"opencv2/core/cvdef.h"
 
-1535461101 /usr/local/include/opencv2/core/vsx_utils.hpp
+1544092017 /usr/local/include/opencv2/core/vsx_utils.hpp
 	"opencv2/core/cvdef.h"
 	<assert.h>
 
-1535461101 /usr/local/include/opencv2/core/check.hpp
+1544093106 /usr/local/include/opencv2/core/check.hpp
 	<opencv2/core/base.hpp>
 
-1535461101 /usr/local/include/opencv2/core/traits.hpp
+1544093106 /usr/local/include/opencv2/core/traits.hpp
 	"opencv2/core/cvdef.h"
 
-1535461101 /usr/local/include/opencv2/core/matx.hpp
+1544093106 /usr/local/include/opencv2/core/matx.hpp
 	"opencv2/core/cvdef.h"
 	"opencv2/core/base.hpp"
 	"opencv2/core/traits.hpp"
 	"opencv2/core/saturate.hpp"
 	<initializer_list>
 
-1535461101 /usr/local/include/opencv2/core/saturate.hpp
+1544093106 /usr/local/include/opencv2/core/saturate.hpp
 	"opencv2/core/cvdef.h"
 	"opencv2/core/fast_math.hpp"
 
-1535461101 /usr/local/include/opencv2/core/types.hpp
+1544093106 /usr/local/include/opencv2/core/types.hpp
 	<climits>
 	<cfloat>
 	<vector>
@@ -174,43 +174,43 @@
 	"opencv2/core/cvstd.hpp"
 	"opencv2/core/matx.hpp"
 
-1535461101 /usr/local/include/opencv2/core/mat.hpp
+1544093106 /usr/local/include/opencv2/core/mat.hpp
 	"opencv2/core/matx.hpp"
 	"opencv2/core/types.hpp"
 	"opencv2/core/bufferpool.hpp"
 	<type_traits>
 	"opencv2/core/mat.inl.hpp"
 
-1535461101 /usr/local/include/opencv2/core/bufferpool.hpp
+1544092017 /usr/local/include/opencv2/core/bufferpool.hpp
 
-1535461101 /usr/local/include/opencv2/core/mat.inl.hpp
+1544093106 /usr/local/include/opencv2/core/mat.inl.hpp
 
-1535461101 /usr/local/include/opencv2/core/persistence.hpp
+1544093106 /usr/local/include/opencv2/core/persistence.hpp
 	"opencv2/core/types.hpp"
 	"opencv2/core/mat.hpp"
 	"opencv2/opencv.hpp"
 	<time.h>
 
-1535461101 /usr/local/include/opencv2/core/operations.hpp
+1544093106 /usr/local/include/opencv2/core/operations.hpp
 	<cstdio>
 
-1535461101 /usr/local/include/opencv2/core/cvstd.inl.hpp
+1544093106 /usr/local/include/opencv2/core/cvstd.inl.hpp
 	<complex>
 	<ostream>
 
-1535461101 /usr/local/include/opencv2/core/utility.hpp
+1544093106 /usr/local/include/opencv2/core/utility.hpp
 	"opencv2/core.hpp"
 	<ostream>
 	<functional>
 	"opencv2/core/core_c.h"
 
-1535461101 /usr/local/include/opencv2/core/core_c.h
+1544093106 /usr/local/include/opencv2/core/core_c.h
 	"opencv2/core/types_c.h"
 	"cxcore.h"
 	"cxcore.h"
 	"opencv2/core/utility.hpp"
 
-1535461101 /usr/local/include/opencv2/core/types_c.h
+1544093106 /usr/local/include/opencv2/core/types_c.h
 	<ipl.h>
 	<ipl/ipl.h>
 	"opencv2/core/cvdef.h"
@@ -220,69 +220,69 @@
 	<float.h>
 	"opencv2/core.hpp"
 
-1535461101 /usr/local/include/opencv/cxcore.h
+1544093106 /usr/local/include/opencv/cxcore.h
 	"opencv2/core/core_c.h"
 
-1535461101 /usr/local/include/opencv2/core/optim.hpp
+1544093106 /usr/local/include/opencv2/core/optim.hpp
 	"opencv2/core.hpp"
 
-1535461101 /usr/local/include/opencv2/core/ovx.hpp
+1544092017 /usr/local/include/opencv2/core/ovx.hpp
 	"cvdef.h"
 
-1535461101 /usr/local/include/opencv2/calib3d.hpp
+1544093106 /usr/local/include/opencv2/calib3d.hpp
 	"opencv2/core.hpp"
 	"opencv2/features2d.hpp"
 	"opencv2/core/affine.hpp"
 	"opencv2/calib3d/calib3d_c.h"
 
-1535461101 /usr/local/include/opencv2/features2d.hpp
+1544093106 /usr/local/include/opencv2/features2d.hpp
 	"opencv2/opencv_modules.hpp"
 	"opencv2/core.hpp"
 	"opencv2/flann/miniflann.hpp"
 
-1535461101 /usr/local/include/opencv2/flann/miniflann.hpp
+1544093106 /usr/local/include/opencv2/flann/miniflann.hpp
 	"opencv2/core.hpp"
 	"opencv2/flann/defines.h"
 
-1535461101 /usr/local/include/opencv2/flann/defines.h
+1544092017 /usr/local/include/opencv2/flann/defines.h
 	"config.h"
 
-1535461101 /usr/local/include/opencv2/flann/config.h
+1544092017 /usr/local/include/opencv2/flann/config.h
 
-1535461101 /usr/local/include/opencv2/core/affine.hpp
+1544092017 /usr/local/include/opencv2/core/affine.hpp
 	<opencv2/core.hpp>
 
-1535461101 /usr/local/include/opencv2/calib3d/calib3d_c.h
+1544093106 /usr/local/include/opencv2/calib3d/calib3d_c.h
 	"opencv2/core/core_c.h"
 
-1535461101 /usr/local/include/opencv2/dnn.hpp
+1544092017 /usr/local/include/opencv2/dnn.hpp
 	<opencv2/dnn/dnn.hpp>
 
-1535461101 /usr/local/include/opencv2/dnn/dnn.hpp
+1544093106 /usr/local/include/opencv2/dnn/dnn.hpp
 	<vector>
 	<opencv2/core.hpp>
 	<opencv2/dnn/dict.hpp>
 	<opencv2/dnn/layer.hpp>
 	<opencv2/dnn/dnn.inl.hpp>
 
-1535461101 /usr/local/include/opencv2/dnn/dict.hpp
+1544093106 /usr/local/include/opencv2/dnn/dict.hpp
 	<opencv2/core.hpp>
 	<map>
 	<ostream>
 	<opencv2/dnn/dnn.hpp>
 
-1535461101 /usr/local/include/opencv2/dnn/layer.hpp
+1544093106 /usr/local/include/opencv2/dnn/layer.hpp
 	<opencv2/dnn.hpp>
 
-1535461101 /usr/local/include/opencv2/dnn/dnn.inl.hpp
+1544093106 /usr/local/include/opencv2/dnn/dnn.inl.hpp
 	<opencv2/dnn.hpp>
 
-1535461101 /usr/local/include/opencv2/flann.hpp
+1544092017 /usr/local/include/opencv2/flann.hpp
 	"opencv2/core.hpp"
 	"opencv2/flann/miniflann.hpp"
 	"opencv2/flann/flann_base.hpp"
 
-1535461101 /usr/local/include/opencv2/flann/flann_base.hpp
+1544092017 /usr/local/include/opencv2/flann/flann_base.hpp
 	<vector>
 	<cassert>
 	<cstdio>
@@ -292,38 +292,38 @@
 	"saving.h"
 	"all_indices.h"
 
-1535461101 /usr/local/include/opencv2/flann/general.h
+1544092017 /usr/local/include/opencv2/flann/general.h
 	"opencv2/core.hpp"
 
-1535461101 /usr/local/include/opencv2/flann/matrix.h
+1544092017 /usr/local/include/opencv2/flann/matrix.h
 	<stdio.h>
 	"general.h"
 
-1535461101 /usr/local/include/opencv2/flann/params.h
+1544092017 /usr/local/include/opencv2/flann/params.h
 	"any.h"
 	"general.h"
 	<iostream>
 	<map>
 
-1535461101 /usr/local/include/opencv2/flann/any.h
+1544092017 /usr/local/include/opencv2/flann/any.h
 	"defines.h"
 	<stdexcept>
 	<ostream>
 	<typeinfo>
 
-1535461101 /usr/local/include/opencv2/flann/saving.h
+1544092017 /usr/local/include/opencv2/flann/saving.h
 	<cstring>
 	<vector>
 	"general.h"
 	"nn_index.h"
 
-1535461101 /usr/local/include/opencv2/flann/nn_index.h
+1544092017 /usr/local/include/opencv2/flann/nn_index.h
 	"general.h"
 	"matrix.h"
 	"result_set.h"
 	"params.h"
 
-1535461101 /usr/local/include/opencv2/flann/result_set.h
+1544092017 /usr/local/include/opencv2/flann/result_set.h
 	<algorithm>
 	<cstring>
 	<iostream>
@@ -331,7 +331,7 @@
 	<set>
 	<vector>
 
-1535461101 /usr/local/include/opencv2/flann/all_indices.h
+1544092017 /usr/local/include/opencv2/flann/all_indices.h
 	"general.h"
 	"nn_index.h"
 	"kdtree_index.h"
@@ -343,7 +343,7 @@
 	"lsh_index.h"
 	"autotuned_index.h"
 
-1535461101 /usr/local/include/opencv2/flann/kdtree_index.h
+1544092017 /usr/local/include/opencv2/flann/kdtree_index.h
 	<algorithm>
 	<map>
 	<cassert>
@@ -358,12 +358,12 @@
 	"random.h"
 	"saving.h"
 
-1535461101 /usr/local/include/opencv2/flann/dynamic_bitset.h
+1544092017 /usr/local/include/opencv2/flann/dynamic_bitset.h
 	<boost/dynamic_bitset.hpp>
 	<limits.h>
 	"dist.h"
 
-1535461101 /usr/local/include/opencv2/flann/dist.h
+1544093106 /usr/local/include/opencv2/flann/dist.h
 	<cmath>
 	<cstdlib>
 	<string.h>
@@ -372,21 +372,21 @@
 	<Intrin.h>
 	"arm_neon.h"
 
-1535461101 /usr/local/include/opencv2/flann/heap.h
+1544092017 /usr/local/include/opencv2/flann/heap.h
 	<algorithm>
 	<vector>
 
-1535461101 /usr/local/include/opencv2/flann/allocator.h
+1544092017 /usr/local/include/opencv2/flann/allocator.h
 	<stdlib.h>
 	<stdio.h>
 
-1535461101 /usr/local/include/opencv2/flann/random.h
+1544092017 /usr/local/include/opencv2/flann/random.h
 	<algorithm>
 	<cstdlib>
 	<vector>
 	"general.h"
 
-1535461101 /usr/local/include/opencv2/flann/kdtree_single_index.h
+1544092017 /usr/local/include/opencv2/flann/kdtree_single_index.h
 	<algorithm>
 	<map>
 	<cassert>
@@ -400,7 +400,7 @@
 	"random.h"
 	"saving.h"
 
-1535461101 /usr/local/include/opencv2/flann/kmeans_index.h
+1544092017 /usr/local/include/opencv2/flann/kmeans_index.h
 	<algorithm>
 	<map>
 	<cassert>
@@ -417,22 +417,22 @@
 	"saving.h"
 	"logger.h"
 
-1535461101 /usr/local/include/opencv2/flann/logger.h
+1544092017 /usr/local/include/opencv2/flann/logger.h
 	<stdio.h>
 	<stdarg.h>
 	"defines.h"
 
-1535461101 /usr/local/include/opencv2/flann/composite_index.h
+1544092017 /usr/local/include/opencv2/flann/composite_index.h
 	"general.h"
 	"nn_index.h"
 	"kdtree_index.h"
 	"kmeans_index.h"
 
-1535461101 /usr/local/include/opencv2/flann/linear_index.h
+1544092017 /usr/local/include/opencv2/flann/linear_index.h
 	"general.h"
 	"nn_index.h"
 
-1535461101 /usr/local/include/opencv2/flann/hierarchical_clustering_index.h
+1544092017 /usr/local/include/opencv2/flann/hierarchical_clustering_index.h
 	<algorithm>
 	<map>
 	<cassert>
@@ -448,7 +448,7 @@
 	"random.h"
 	"saving.h"
 
-1535461101 /usr/local/include/opencv2/flann/lsh_index.h
+1544092017 /usr/local/include/opencv2/flann/lsh_index.h
 	<algorithm>
 	<cassert>
 	<cstring>
@@ -464,7 +464,7 @@
 	"random.h"
 	"saving.h"
 
-1535461101 /usr/local/include/opencv2/flann/lsh_table.h
+1544092017 /usr/local/include/opencv2/flann/lsh_table.h
 	<algorithm>
 	<iostream>
 	<iomanip>
@@ -476,7 +476,7 @@
 	"dynamic_bitset.h"
 	"matrix.h"
 
-1535461101 /usr/local/include/opencv2/flann/autotuned_index.h
+1544092017 /usr/local/include/opencv2/flann/autotuned_index.h
 	<sstream>
 	"general.h"
 	"nn_index.h"
@@ -490,11 +490,11 @@
 	"linear_index.h"
 	"logger.h"
 
-1535461101 /usr/local/include/opencv2/flann/ground_truth.h
+1544092017 /usr/local/include/opencv2/flann/ground_truth.h
 	"dist.h"
 	"matrix.h"
 
-1535461101 /usr/local/include/opencv2/flann/index_testing.h
+1544092017 /usr/local/include/opencv2/flann/index_testing.h
 	<cstring>
 	<cassert>
 	<cmath>
@@ -504,103 +504,103 @@
 	"logger.h"
 	"timer.h"
 
-1535461101 /usr/local/include/opencv2/flann/timer.h
+1544092017 /usr/local/include/opencv2/flann/timer.h
 	<time.h>
 	"opencv2/core.hpp"
 	"opencv2/core/utility.hpp"
 
-1535461101 /usr/local/include/opencv2/flann/sampling.h
+1544092017 /usr/local/include/opencv2/flann/sampling.h
 	"matrix.h"
 	"random.h"
 
-1535461101 /usr/local/include/opencv2/highgui.hpp
+1544093106 /usr/local/include/opencv2/highgui.hpp
 	"opencv2/core.hpp"
 	"opencv2/imgcodecs.hpp"
 	"opencv2/videoio.hpp"
 	"opencv2/highgui/highgui_c.h"
 
-1535461101 /usr/local/include/opencv2/imgcodecs.hpp
+1544093106 /usr/local/include/opencv2/imgcodecs.hpp
 	"opencv2/core.hpp"
 
-1535461101 /usr/local/include/opencv2/videoio.hpp
+1544093106 /usr/local/include/opencv2/videoio.hpp
 	"opencv2/core.hpp"
 
-1535461101 /usr/local/include/opencv2/highgui/highgui_c.h
+1544093106 /usr/local/include/opencv2/highgui/highgui_c.h
 	"opencv2/core/core_c.h"
 	"opencv2/imgproc/imgproc_c.h"
 	"opencv2/imgcodecs/imgcodecs_c.h"
 	"opencv2/videoio/videoio_c.h"
 
-1535461101 /usr/local/include/opencv2/imgproc/imgproc_c.h
+1544093106 /usr/local/include/opencv2/imgproc/imgproc_c.h
 	"opencv2/imgproc/types_c.h"
 
-1535461101 /usr/local/include/opencv2/imgproc/types_c.h
+1544092017 /usr/local/include/opencv2/imgproc/types_c.h
 	"opencv2/core/core_c.h"
 
-1535461101 /usr/local/include/opencv2/imgcodecs/imgcodecs_c.h
+1544093106 /usr/local/include/opencv2/imgcodecs/imgcodecs_c.h
 	"opencv2/core/core_c.h"
 
-1535461101 /usr/local/include/opencv2/videoio/videoio_c.h
+1544093106 /usr/local/include/opencv2/videoio/videoio_c.h
 	"opencv2/core/core_c.h"
 
-1535461101 /usr/local/include/opencv2/imgproc.hpp
+1544093106 /usr/local/include/opencv2/imgproc.hpp
 	"opencv2/core.hpp"
 	"opencv2/imgproc/imgproc_c.h"
 
-1535461101 /usr/local/include/opencv2/ml.hpp
+1544093106 /usr/local/include/opencv2/ml.hpp
 	"opencv2/core.hpp"
 	<float.h>
 	<map>
 	<iostream>
 	<opencv2/ml/ml.inl.hpp>
 
-1535461101 /usr/local/include/opencv2/ml/ml.inl.hpp
+1544092017 /usr/local/include/opencv2/ml/ml.inl.hpp
 
-1535461101 /usr/local/include/opencv2/objdetect.hpp
+1544093106 /usr/local/include/opencv2/objdetect.hpp
 	"opencv2/core.hpp"
 	"opencv2/objdetect/detection_based_tracker.hpp"
 	"opencv2/objdetect/objdetect_c.h"
 
-1535461101 /usr/local/include/opencv2/objdetect/detection_based_tracker.hpp
+1544093106 /usr/local/include/opencv2/objdetect/detection_based_tracker.hpp
 	<opencv2/core.hpp>
 	<vector>
 
-1535461101 /usr/local/include/opencv2/objdetect/objdetect_c.h
+1544093106 /usr/local/include/opencv2/objdetect/objdetect_c.h
 	"opencv2/core/core_c.h"
 	<deque>
 	<vector>
 
-1535461101 /usr/local/include/opencv2/photo.hpp
+1544093106 /usr/local/include/opencv2/photo.hpp
 	"opencv2/core.hpp"
 	"opencv2/imgproc.hpp"
 	"opencv2/photo/photo_c.h"
 
-1535461101 /usr/local/include/opencv2/photo/photo_c.h
+1544093106 /usr/local/include/opencv2/photo/photo_c.h
 	"opencv2/core/core_c.h"
 
-1535461101 /usr/local/include/opencv2/shape.hpp
+1544093106 /usr/local/include/opencv2/shape.hpp
 	"opencv2/shape/emdL1.hpp"
 	"opencv2/shape/shape_transformer.hpp"
 	"opencv2/shape/hist_cost.hpp"
 	"opencv2/shape/shape_distance.hpp"
 
-1535461101 /usr/local/include/opencv2/shape/emdL1.hpp
+1544093106 /usr/local/include/opencv2/shape/emdL1.hpp
 	"opencv2/core.hpp"
 
-1535461101 /usr/local/include/opencv2/shape/shape_transformer.hpp
+1544093106 /usr/local/include/opencv2/shape/shape_transformer.hpp
 	<vector>
 	"opencv2/core.hpp"
 	"opencv2/imgproc.hpp"
 
-1535461101 /usr/local/include/opencv2/shape/hist_cost.hpp
+1544093106 /usr/local/include/opencv2/shape/hist_cost.hpp
 	"opencv2/imgproc.hpp"
 
-1535461101 /usr/local/include/opencv2/shape/shape_distance.hpp
+1544093106 /usr/local/include/opencv2/shape/shape_distance.hpp
 	"opencv2/core.hpp"
 	"opencv2/shape/hist_cost.hpp"
 	"opencv2/shape/shape_transformer.hpp"
 
-1535461101 /usr/local/include/opencv2/stitching.hpp
+1544093106 /usr/local/include/opencv2/stitching.hpp
 	"opencv2/core.hpp"
 	"opencv2/features2d.hpp"
 	"opencv2/stitching/warpers.hpp"
@@ -611,96 +611,96 @@
 	"opencv2/stitching/detail/blenders.hpp"
 	"opencv2/stitching/detail/camera.hpp"
 
-1535461101 /usr/local/include/opencv2/stitching/warpers.hpp
+1544092017 /usr/local/include/opencv2/stitching/warpers.hpp
 	"opencv2/stitching/detail/warpers.hpp"
 
-1535461101 /usr/local/include/opencv2/stitching/detail/warpers.hpp
+1544092017 /usr/local/include/opencv2/stitching/detail/warpers.hpp
 	"opencv2/core.hpp"
 	"opencv2/core/cuda.hpp"
 	"opencv2/imgproc.hpp"
 	"opencv2/opencv_modules.hpp"
 	"warpers_inl.hpp"
 
-1535461101 /usr/local/include/opencv2/core/cuda.hpp
+1544093106 /usr/local/include/opencv2/core/cuda.hpp
 	"opencv2/core.hpp"
 	"opencv2/core/cuda_types.hpp"
 	<opencv2/opencv.hpp>
 	"opencv2/core/cuda.inl.hpp"
 
-1535461101 /usr/local/include/opencv2/core/cuda_types.hpp
+1544092017 /usr/local/include/opencv2/core/cuda_types.hpp
 
-1535461101 /usr/local/include/opencv2/core/cuda.inl.hpp
+1544092017 /usr/local/include/opencv2/core/cuda.inl.hpp
 	"opencv2/core/cuda.hpp"
 
-1535461101 /usr/local/include/opencv2/stitching/detail/warpers_inl.hpp
+1544092017 /usr/local/include/opencv2/stitching/detail/warpers_inl.hpp
 	"opencv2/core.hpp"
 	"warpers.hpp"
 	<limits>
 
-1535461101 /usr/local/include/opencv2/stitching/detail/matchers.hpp
+1544093106 /usr/local/include/opencv2/stitching/detail/matchers.hpp
 	"opencv2/core.hpp"
 	"opencv2/features2d.hpp"
 	"opencv2/opencv_modules.hpp"
 	"opencv2/xfeatures2d/cuda.hpp"
 
-1535461101 /usr/local/include/opencv2/stitching/detail/motion_estimators.hpp
+1544092017 /usr/local/include/opencv2/stitching/detail/motion_estimators.hpp
 	"opencv2/core.hpp"
 	"matchers.hpp"
 	"util.hpp"
 	"camera.hpp"
 
-1535461101 /usr/local/include/opencv2/stitching/detail/util.hpp
+1544092017 /usr/local/include/opencv2/stitching/detail/util.hpp
 	<list>
 	"opencv2/core.hpp"
 	"util_inl.hpp"
 
-1535461101 /usr/local/include/opencv2/stitching/detail/util_inl.hpp
+1544092017 /usr/local/include/opencv2/stitching/detail/util_inl.hpp
 	<queue>
 	"opencv2/core.hpp"
 	"util.hpp"
 
-1535461101 /usr/local/include/opencv2/stitching/detail/camera.hpp
+1544092017 /usr/local/include/opencv2/stitching/detail/camera.hpp
 	"opencv2/core.hpp"
 
-1535461101 /usr/local/include/opencv2/stitching/detail/exposure_compensate.hpp
+1544092017 /usr/local/include/opencv2/stitching/detail/exposure_compensate.hpp
 	"opencv2/core.hpp"
 
-1535461101 /usr/local/include/opencv2/stitching/detail/seam_finders.hpp
+1544092017 /usr/local/include/opencv2/stitching/detail/seam_finders.hpp
 	<set>
 	"opencv2/core.hpp"
 	"opencv2/opencv_modules.hpp"
 
-1535461101 /usr/local/include/opencv2/stitching/detail/blenders.hpp
+1544092017 /usr/local/include/opencv2/stitching/detail/blenders.hpp
 	"opencv2/core.hpp"
 	"opencv2/core/cuda.hpp"
 
-1535461101 /usr/local/include/opencv2/superres.hpp
+1544093106 /usr/local/include/opencv2/superres.hpp
 	"opencv2/core.hpp"
 	"opencv2/superres/optical_flow.hpp"
 
-1535461101 /usr/local/include/opencv2/superres/optical_flow.hpp
+1544093106 /usr/local/include/opencv2/superres/optical_flow.hpp
 	"opencv2/core.hpp"
 
-1535461101 /usr/local/include/opencv2/video.hpp
+1544093106 /usr/local/include/opencv2/video.hpp
 	"opencv2/video/tracking.hpp"
 	"opencv2/video/background_segm.hpp"
 	"opencv2/video/tracking_c.h"
 
-1535461101 /usr/local/include/opencv2/video/tracking.hpp
+1544093106 /usr/local/include/opencv2/video/tracking.hpp
 	"opencv2/core.hpp"
 	"opencv2/imgproc.hpp"
 
-1535461101 /usr/local/include/opencv2/video/background_segm.hpp
+1544092017 /usr/local/include/opencv2/video/background_segm.hpp
 	"opencv2/core.hpp"
 
-1535461101 /usr/local/include/opencv2/video/tracking_c.h
+1544093106 /usr/local/include/opencv2/video/tracking_c.h
 	"opencv2/imgproc/types_c.h"
 
-1535461101 /usr/local/include/opencv2/videostab.hpp
+1544093106 /usr/local/include/opencv2/videostab.hpp
 	"opencv2/videostab/stabilizer.hpp"
 	"opencv2/videostab/ring_buffer.hpp"
 
-1535461101 /usr/local/include/opencv2/videostab/stabilizer.hpp
+1544093106 /usr/local/include/opencv2/videostab/stabilizer.hpp
 	<vector>
 	<ctime>
 	"opencv2/core.hpp"
@@ -713,7 +713,7 @@
 	"opencv2/videostab/deblurring.hpp"
 	"opencv2/videostab/wobble_suppression.hpp"
 
-1535461101 /usr/local/include/opencv2/videostab/global_motion.hpp
+1544093106 /usr/local/include/opencv2/videostab/global_motion.hpp
 	<vector>
 	<fstream>
 	"opencv2/core.hpp"
@@ -724,34 +724,34 @@
 	"opencv2/videostab/outlier_rejection.hpp"
 	"opencv2/cudaimgproc.hpp"
 
-1535461101 /usr/local/include/opencv2/videostab/optical_flow.hpp
+1544093106 /usr/local/include/opencv2/videostab/optical_flow.hpp
 	"opencv2/core.hpp"
 	"opencv2/opencv_modules.hpp"
 	"opencv2/cudaoptflow.hpp"
 
-1535461101 /usr/local/include/opencv2/videostab/motion_core.hpp
+1544093106 /usr/local/include/opencv2/videostab/motion_core.hpp
 	<cmath>
 	"opencv2/core.hpp"
 
-1535461101 /usr/local/include/opencv2/videostab/outlier_rejection.hpp
+1544093106 /usr/local/include/opencv2/videostab/outlier_rejection.hpp
 	<vector>
 	"opencv2/core.hpp"
 	"opencv2/videostab/motion_core.hpp"
 
-1535461101 /usr/local/include/opencv2/videostab/motion_stabilizing.hpp
+1544093106 /usr/local/include/opencv2/videostab/motion_stabilizing.hpp
 	<vector>
 	<utility>
 	"opencv2/core.hpp"
 	"opencv2/videostab/global_motion.hpp"
 
-1535461101 /usr/local/include/opencv2/videostab/frame_source.hpp
+1544093106 /usr/local/include/opencv2/videostab/frame_source.hpp
 	<vector>
 	"opencv2/core.hpp"
 
-1535461101 /usr/local/include/opencv2/videostab/log.hpp
+1544093106 /usr/local/include/opencv2/videostab/log.hpp
 	"opencv2/core.hpp"
 
-1535461101 /usr/local/include/opencv2/videostab/inpainting.hpp
+1544093106 /usr/local/include/opencv2/videostab/inpainting.hpp
 	<vector>
 	"opencv2/core.hpp"
 	"opencv2/videostab/optical_flow.hpp"
@@ -759,28 +759,31 @@
 	"opencv2/videostab/global_motion.hpp"
 	"opencv2/photo.hpp"
 
-1535461101 /usr/local/include/opencv2/videostab/fast_marching.hpp
+1544093106 /usr/local/include/opencv2/videostab/fast_marching.hpp
 	<cmath>
 	<queue>
 	<algorithm>
 	"opencv2/core.hpp"
 	"fast_marching_inl.hpp"
 
-1535461101 /usr/local/include/opencv2/videostab/fast_marching_inl.hpp
+1544093106 /usr/local/include/opencv2/videostab/fast_marching_inl.hpp
 	"opencv2/videostab/fast_marching.hpp"
 
-1535461101 /usr/local/include/opencv2/videostab/deblurring.hpp
+1544093106 /usr/local/include/opencv2/videostab/deblurring.hpp
 	<vector>
 	"opencv2/core.hpp"
 
-1535461101 /usr/local/include/opencv2/videostab/wobble_suppression.hpp
+1544093106 /usr/local/include/opencv2/videostab/wobble_suppression.hpp
 	<vector>
 	"opencv2/core.hpp"
 	"opencv2/core/cuda.hpp"
 	"opencv2/videostab/global_motion.hpp"
 	"opencv2/videostab/log.hpp"
 
-1535461101 /usr/local/include/opencv2/videostab/ring_buffer.hpp
+1544093106 /usr/local/include/opencv2/videostab/ring_buffer.hpp
 	<vector>
 	"opencv2/imgproc.hpp"
+
+1544092171 /usr/local/include/opencv2/xfeatures2d/cuda.hpp
+	"opencv2/core/cuda.hpp"
 
