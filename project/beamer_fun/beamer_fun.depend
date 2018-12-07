@@ -1,5 +1,30 @@
 # depslib dependency file v1.0
-1544135516 source:/home/robbe/Documents/school/labo_beeldinterpretatie/2018_labo_beeldinterpretatie/project/beamer_fun/main.cpp
+1544220462 source:/home/robbe/Documents/school/labo_beeldinterpretatie/2018_labo_beeldinterpretatie/project/beamer_fun/main.cpp
+	<iostream>
+	<opencv2/opencv.hpp>
+	<opencv2/tracking.hpp>
+	"opencv2/core.hpp"
+	"opencv2/features2d.hpp"
+	"opencv2/highgui.hpp"
+	"opencv2/imgproc.hpp"
+	"opencv2/ml.hpp"
+	<string.h>
+	"achtergrond.h"
+	"detection.h"
+	"tracking.h"
+
+1544220059 /home/robbe/Documents/school/labo_beeldinterpretatie/2018_labo_beeldinterpretatie/project/beamer_fun/achtergrond.h
+	<iostream>
+	<opencv2/opencv.hpp>
+	<opencv2/tracking.hpp>
+	"opencv2/core.hpp"
+	"opencv2/features2d.hpp"
+	"opencv2/highgui.hpp"
+	"opencv2/imgproc.hpp"
+	"opencv2/ml.hpp"
+	<string.h>
+
+1544220170 source:/home/robbe/Documents/school/labo_beeldinterpretatie/2018_labo_beeldinterpretatie/project/beamer_fun/achtergrond.cpp
 	<iostream>
 	<opencv2/opencv.hpp>
 	<opencv2/tracking.hpp>
@@ -11,7 +36,7 @@
 	<string.h>
 	"achtergrond.h"
 
-1544135012 /home/robbe/Documents/school/labo_beeldinterpretatie/2018_labo_beeldinterpretatie/project/beamer_fun/achtergrond.h
+1544218549 /home/robbe/Documents/school/labo_beeldinterpretatie/2018_labo_beeldinterpretatie/project/beamer_fun/detection.h
 	<iostream>
 	<opencv2/opencv.hpp>
 	<opencv2/tracking.hpp>
@@ -22,7 +47,7 @@
 	"opencv2/ml.hpp"
 	<string.h>
 
-1544135448 source:/home/robbe/Documents/school/labo_beeldinterpretatie/2018_labo_beeldinterpretatie/project/beamer_fun/achtergrond.cpp
+1544218549 source:/home/robbe/Documents/school/labo_beeldinterpretatie/2018_labo_beeldinterpretatie/project/beamer_fun/detection.cpp
 	<iostream>
 	<opencv2/opencv.hpp>
 	<opencv2/tracking.hpp>
@@ -32,5 +57,28 @@
 	"opencv2/imgproc.hpp"
 	"opencv2/ml.hpp"
 	<string.h>
-	"achtergrond.h"
+	"detection.h"
+
+1544218402 source:/home/robbe/Documents/school/labo_beeldinterpretatie/2018_labo_beeldinterpretatie/project/beamer_fun/tracking.cpp
+	<iostream>
+	<opencv2/opencv.hpp>
+	<opencv2/tracking.hpp>
+	"opencv2/core.hpp"
+	"opencv2/features2d.hpp"
+	"opencv2/highgui.hpp"
+	"opencv2/imgproc.hpp"
+	"opencv2/ml.hpp"
+	<string.h>
+	"tracking.h"
+
+1544218372 /home/robbe/Documents/school/labo_beeldinterpretatie/2018_labo_beeldinterpretatie/project/beamer_fun/tracking.h
+	<iostream>
+	<opencv2/opencv.hpp>
+	<opencv2/tracking.hpp>
+	"opencv2/core.hpp"
+	"opencv2/features2d.hpp"
+	"opencv2/highgui.hpp"
+	"opencv2/imgproc.hpp"
+	"opencv2/ml.hpp"
+	<string.h>
 

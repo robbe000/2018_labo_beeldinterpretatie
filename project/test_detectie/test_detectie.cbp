@@ -2,24 +2,25 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="beamer_fun" />
+		<Option title="test_detectie" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Debug">
-				<Option output="bin/Debug/beamer_fun" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Debug/test_detectie" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
+				<Option parameters='-input=&quot;../test_tracking/tracking4.mp4&quot;' />
 				<Compiler>
 					<Add option="-g" />
 				</Compiler>
 				<Linker>
-					<Add option="`pkg-config opencv --libs`" />
+					<Add option="`pkg-config opencv --cflags --libs`" />
 				</Linker>
 			</Target>
 			<Target title="Release">
-				<Option output="bin/Release/beamer_fun" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Release/test_detectie" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Release/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -34,13 +35,7 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="achtergrond.cpp" />
-		<Unit filename="achtergrond.h" />
-		<Unit filename="detection.cpp" />
-		<Unit filename="detection.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="tracking.cpp" />
-		<Unit filename="tracking.h" />
 		<Extensions>
 			<code_completion />
 			<debugger />

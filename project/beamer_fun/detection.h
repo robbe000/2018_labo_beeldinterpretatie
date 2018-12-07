@@ -8,14 +8,7 @@
 #include "opencv2/ml.hpp"
 #include <string.h>
 
-#define STAT_WAIT_SCHERMDET 0
-#define STAT_WAIT_HANDDET 1
-#define STAT_HAND_TRACK 2
-
 using namespace std;
 using namespace cv;
-using namespace ml;
 
-Mat tekenAchtergrond(int status);
-void tekenBoodschap(Mat achtergrond, String text);
-Mat tekenTracker(int status, Rect2d positie);
+Rect detect(Mat frame, CascadeClassifier haar_face_classifier);
