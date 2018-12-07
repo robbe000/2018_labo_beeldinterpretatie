@@ -116,7 +116,6 @@ int main(int argc, const char** argv) {
     ktemplate_akaze = features(template_akaze, 2);
     drawKeypoints(template_akaze, ktemplate_akaze, template_akaze, Scalar::all(-1), DrawMatchesFlags::DEFAULT);
 
-    /*
     namedWindow("input_orb");
     imshow("input_orb", input_orb);
     namedWindow("input_brisk");
@@ -130,7 +129,7 @@ int main(int argc, const char** argv) {
     imshow("temp_brisk", template_brisk);
     namedWindow("temp_akaze");
     imshow("temp_akaze", template_akaze);
-    waitKey(0);*/
+    waitKey(0);
 
     //Uit bovenstaande experimenten heb ik de akaze methode genomen.
     //Dit omdat deze methode de meeste keypoints ontdekt.

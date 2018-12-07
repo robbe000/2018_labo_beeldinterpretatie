@@ -11,7 +11,7 @@
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
-				<Option parameters='-input=&quot;fitness_image.png&quot; -template=&quot;fitness_object.png&quot;' />
+				<Option parameters='-input=&quot;beamer_fun2.png&quot; -template=&quot;hand.png&quot;' />
 				<Compiler>
 					<Add option="-g" />
 				</Compiler>

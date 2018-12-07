@@ -13,7 +13,7 @@ Ten slotte moet het systeem ook overweg kunnen met een hand dat buiten beeld gaa
 
 * **MIL**
 
-* **KCF**
+* **KCF** Na vele testen blijkt dit de beste optie te zijn voor dit specifiek probleem.
 
 * **TLD**
 
