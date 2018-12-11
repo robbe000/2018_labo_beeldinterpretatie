@@ -27,7 +27,7 @@ Rect detect(Mat frame, CascadeClassifier haar_face_classifier) {
     haar_face_classifier.detectMultiScale(frame_grijs, gezichten, score, 1.05, 3);
 
     for(uint i=0; i<gezichten.size(); i++) {
-        if(score[i]>150) {
+        if(score[i]>120) {
             //Center bepalen
             Point center( gezichten[i].x + gezichten[i].width*0.5, gezichten[i].y + gezichten[i].height*0.5 );
 

@@ -7,7 +7,8 @@
 #include "opencv2/imgproc.hpp"
 #include "opencv2/ml.hpp"
 #include <string.h>
-#include "tracking.h"
 
 using namespace std;
 using namespace cv;
+
+Rect detect_scherm(Mat input_img);

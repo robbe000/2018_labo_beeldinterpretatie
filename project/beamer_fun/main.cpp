@@ -1,4 +1,3 @@
-
 ////////////////////////////////////////////////////////////////////////////
 //
 //   Project     : Beamer Fun
@@ -21,9 +20,10 @@
 
 #include "achtergrond.h"
 #include "detection.h"
-#include "tracking.h"
+#include "detect_scherm.h"
 
 #define HANDMODEL "Hand.Cascade.1.xml"
+#define MAXSCHAAL 3
 
 using namespace std;
 using namespace cv;
@@ -32,7 +32,11 @@ using namespace ml;
 int main(int argc, const char** argv) {
     VideoCapture vcap;
     Mat frame;
-    int status = STAT_WAIT_HANDDET;
+    int status = STAT_DETECT_SCHERM;
+    float schaal = MAXSCHAAL + 1;
+    Rect scherm;
+    Rect2d positie;
+    int detectTeller = 0;
 
     //Helpboodschap configureren
     CommandLineParser parser(argc, argv,
@@ -43,13 +47,6 @@ int main(int argc, const char** argv) {
         parser.printMessage();
         return -1;
     }
-
-    //Videostream van IPCamera (GSM)
-    if(!vcap.open("http://192.168.1.119:8080//video")) {
-        cout << "Kon videostream niet openen!" << endl;
-        return -1;
-    }
-    cout << "Videostream gevonden!" << endl;
 
     //Model inlezen
     CascadeClassifier haar_face_classifier;
@@ -63,6 +60,9 @@ int main(int argc, const char** argv) {
     Ptr<Tracker> tracker;
     tracker = TrackerBoosting::create();
 
+    //Positie van de toetsen berekenen
+    berekenToetsen();
+
     //Live video canvas klaarzetten
     namedWindow("Live");
 
@@ -70,17 +70,38 @@ int main(int argc, const char** argv) {
     namedWindow("Achtergrond");
     imshow("Achtergrond", tekenAchtergrond(status));
 
-    Rect2d positie;
-    int detectTeller = 0;
+    waitKey(0);
+
+    //Videostream van IPCamera (GSM)
+    if(!vcap.open("http://192.168.1.111:8080/video")) {
+        cout << "Kon videostream niet openen!" << endl;
+        return -1;
+    }
+    cout << "Videostream gevonden!" << endl;
+
     while(1) {
         if(!vcap.read(frame)) {
             cout << "Kon frame niet inlezen" << endl;
             return -1;
         }
 
+        //Een scherm gevonden?
+        //Of scherm te ver van camera?
+        //Verhouding inputbeeld/scherm mag maximum MAXSCHAAL zijn
+        if(status == STAT_DETECT_SCHERM) {
+            scherm = detect_scherm(frame);
+            schaal = (float)frame.cols/scherm.width;
+            cout << "Verhouding: " << schaal << endl;
+
+            if(schaal < MAXSCHAAL) {
+                status = STAT_WAIT_HANDDET;
+                imshow("Achtergrond", tekenAchtergrond(status));
+            }
+        }
+
         //Om het hand te kunnen tracken moet er natuurlijk wel eerst een hand gevonden worden!
         if(status == STAT_WAIT_HANDDET) {
-            //Voor snelheid 1 keer om de dertig frames zoeken naar een hand
+            //Voor snelheid slechts 1 keer om de 20 frames zoeken naar een hand
             if(detectTeller == 20) {
                 positie = detect(frame, haar_face_classifier);
                 detectTeller=0;
@@ -101,6 +122,12 @@ int main(int argc, const char** argv) {
                     //Achtergrond aanpassen
                     status = STAT_HAND_TRACK;
                     imshow("Achtergrond", tekenAchtergrond(status));
+
+                    //Videostream van IPCamera opnieuw openen (GSM)
+                    if(!vcap.open("http://192.168.1.111:8080/video")) {
+                        cout << "Kon videostream niet openen!" << endl;
+                        return -1;
+                    }
                 }
                 imshow("Live", frame);
             }
@@ -120,7 +147,7 @@ int main(int argc, const char** argv) {
                 cerr << "TRACKEN LUKT NIET MEER!!" << endl;
             }
             imshow("Live", frame);
-            imshow("Achtergrond", tekenTracker(status, positie));
+            imshow("Achtergrond", tekenTracker(status, positie, schaal, frame));
         }
 
         //imshow("Live", frame);

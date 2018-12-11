@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1544447865 source:/home/robbe/Documents/school/labo_beeldinterpretatie/2018_labo_beeldinterpretatie/project/detect_hand/main.cpp
+	<iostream>
+	<opencv2/opencv.hpp>
+	<opencv2/tracking.hpp>
+	"opencv2/core.hpp"
+	"opencv2/features2d.hpp"
+	"opencv2/highgui.hpp"
+	"opencv2/imgproc.hpp"
+	"opencv2/ml.hpp"
+	<string.h>
+
+1544448899 source:/home/robbe/Documents/school/labo_beeldinterpretatie/2018_labo_beeldinterpretatie/project/detect_scherm/main.cpp
+	<iostream>
+	<opencv2/opencv.hpp>
+	<opencv2/tracking.hpp>
+	"opencv2/core.hpp"
+	"opencv2/features2d.hpp"
+	"opencv2/highgui.hpp"
+	"opencv2/imgproc.hpp"
+	"opencv2/ml.hpp"
+	<string.h>
+

@@ -36,11 +36,11 @@
 		</Compiler>
 		<Unit filename="achtergrond.cpp" />
 		<Unit filename="achtergrond.h" />
+		<Unit filename="detect_scherm.cpp" />
+		<Unit filename="detect_scherm.h" />
 		<Unit filename="detection.cpp" />
 		<Unit filename="detection.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="tracking.cpp" />
-		<Unit filename="tracking.h" />
 		<Extensions>
 			<code_completion />
 			<debugger />
