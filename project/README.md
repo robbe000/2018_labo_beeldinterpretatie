@@ -7,3 +7,5 @@ Je hebt een projector en een webcam die erop is gericht. Kan jij hier een spel m
 
 * **Tracking** : Het tracken van één hand. Op deze manier de locatie van het hand in het beeld bepalen. 
 OpenCv ondersteund acht soorten trackers. In de subfolder test_tracking probeer ik deze acht soorten uit en zal er gekozen worden voor de meest passende oplossing.
+
+* **Detectie** : Voordat we een object kunnen volgen moeten we natuurlijk eerst weten welk object we moeten volgen.  We zullen een hand in het beeld proberen te vinden via een Viola–Jones object detector.
