@@ -25,6 +25,10 @@
 #define HANDMODEL "Hand.Cascade.1.xml"
 #define MAXSCHAAL 3
 
+//IPCamera http://192.168.1.111:8080/video
+//USB 1
+#define BRON 1
+
 using namespace std;
 using namespace cv;
 using namespace ml;
@@ -73,7 +77,7 @@ int main(int argc, const char** argv) {
     waitKey(0);
 
     //Videostream van IPCamera (GSM)
-    if(!vcap.open("http://192.168.1.111:8080/video")) {
+    if(!vcap.open(BRON)) {
         cout << "Kon videostream niet openen!" << endl;
         return -1;
     }
@@ -88,7 +92,9 @@ int main(int argc, const char** argv) {
         //Een scherm gevonden?
         //Of scherm te ver van camera?
         //Verhouding inputbeeld/scherm mag maximum MAXSCHAAL zijn
+
         if(status == STAT_DETECT_SCHERM) {
+            /*
             scherm = detect_scherm(frame);
             schaal = (float)frame.cols/scherm.width;
             cout << "Verhouding: " << schaal << endl;
@@ -96,13 +102,16 @@ int main(int argc, const char** argv) {
             if(schaal < MAXSCHAAL) {
                 status = STAT_WAIT_HANDDET;
                 imshow("Achtergrond", tekenAchtergrond(status));
-            }
+            }*/
+
+            status = STAT_WAIT_HANDDET;
+            imshow("Achtergrond", tekenAchtergrond(status));
         }
 
         //Om het hand te kunnen tracken moet er natuurlijk wel eerst een hand gevonden worden!
         if(status == STAT_WAIT_HANDDET) {
-            //Voor snelheid slechts 1 keer om de 20 frames zoeken naar een hand
-            if(detectTeller == 20) {
+            //Voor snelheid slechts 1 keer om de 10 frames zoeken naar een hand
+            if(detectTeller == 10) {
                 positie = detect(frame, haar_face_classifier);
                 detectTeller=0;
                 cout << positie << endl;
@@ -123,8 +132,8 @@ int main(int argc, const char** argv) {
                     status = STAT_HAND_TRACK;
                     imshow("Achtergrond", tekenAchtergrond(status));
 
-                    //Videostream van IPCamera opnieuw openen (GSM)
-                    if(!vcap.open("http://192.168.1.111:8080/video")) {
+                    //Videostream van IPCamera opnieuw openen
+                    if(!vcap.open(BRON)) {
                         cout << "Kon videostream niet openen!" << endl;
                         return -1;
                     }

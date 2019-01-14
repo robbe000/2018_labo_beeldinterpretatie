@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1545050810 source:/home/robbe/Documents/school/labo_beeldinterpretatie/2018_labo_beeldinterpretatie/project/beamer_fun/main.cpp
+1547482442 source:/home/robbe/Documents/school/labo_beeldinterpretatie/2018_labo_beeldinterpretatie/project/beamer_fun/main.cpp
 	<iostream>
 	<opencv2/opencv.hpp>
 	<opencv2/tracking.hpp>
@@ -13,7 +13,7 @@
 	"detection.h"
 	"detect_scherm.h"
 
-1545050810 /home/robbe/Documents/school/labo_beeldinterpretatie/2018_labo_beeldinterpretatie/project/beamer_fun/achtergrond.h
+1547481643 /home/robbe/Documents/school/labo_beeldinterpretatie/2018_labo_beeldinterpretatie/project/beamer_fun/achtergrond.h
 	<iostream>
 	<opencv2/opencv.hpp>
 	<opencv2/tracking.hpp>

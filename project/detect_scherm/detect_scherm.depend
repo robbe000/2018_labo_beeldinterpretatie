@@ -10,7 +10,7 @@
 	"opencv2/ml.hpp"
 	<string.h>
 
-1544448899 source:/home/robbe/Documents/school/labo_beeldinterpretatie/2018_labo_beeldinterpretatie/project/detect_scherm/main.cpp
+1545050810 source:/home/robbe/Documents/school/labo_beeldinterpretatie/2018_labo_beeldinterpretatie/project/detect_scherm/main.cpp
 	<iostream>
 	<opencv2/opencv.hpp>
 	<opencv2/tracking.hpp>

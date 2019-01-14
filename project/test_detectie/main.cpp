@@ -94,7 +94,7 @@ int main(int argc, const char** argv) {
     while(video.read(frame)) {
         detect(frame, haar_face_classifier);
         imshow("Video", frame);
-        waitKey(32);
+        waitKey(1);
     }
 
 }

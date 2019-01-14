@@ -8,7 +8,6 @@
 #include "opencv2/ml.hpp"
 #include <string.h>
 
-#define STAT_WAIT_SCHERMDET 0
 #define STAT_WAIT_HANDDET 1
 #define STAT_HAND_TRACK 2
 #define STAT_DETECT_SCHERM 3
